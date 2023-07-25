@@ -30,8 +30,8 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html"); ;
-
-//app.MapHub<SignalHub>("/signalhub");
+//app.UseWebSockets();
+//app.MapHub<ProgressHub>("/progresshub");
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<ProgressHub>("/progressHub"); // Map the hub URL here
